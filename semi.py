@@ -51,7 +51,7 @@ class ToDoListManager:
             removed_task = self.tasks.pop(task_index)
             print(f"Task '{removed_task.name}' deleted.")
         else:
-            print("Invalid task number. Please input an int")
+            print("Invalid task number.")
 
     def run(self):
         while True:
@@ -73,14 +73,14 @@ class ToDoListManager:
                 completed = input("View (C)ompleted or (I)ncomplete tasks? ").lower() == 'c'
                 self.filter_tasks(completed)
             elif choice == '4':
-                task_index = int(input("Enter task # to edit: ")) - 1
+                task_index = int(input("Enter task number to edit: ")) - 1
                 new_name = input("Enter new task name: ")
                 self.edit_task(task_index, new_name)
             elif choice == '5':
-                task_index = int(input("Enter task # to mark as complete: ")) - 1
+                task_index = int(input("Enter task number to mark as complete: ")) - 1
                 self.mark_task_complete(task_index)
             elif choice == '6':
-                task_index = int(input("Enter task # to delete: ")) - 1
+                task_index = int(input("Enter task number to delete: ")) - 1
                 self.delete_task(task_index)
             elif choice == '7':
                 print("Exiting program.")
@@ -92,3 +92,6 @@ class ToDoListManager:
 if __name__ == "__main__":
     manager = ToDoListManager()
     manager.run()
+
+#edited
+#edited2:>
